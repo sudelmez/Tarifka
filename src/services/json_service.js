@@ -9,6 +9,7 @@ const JsonMealService = {
         ? jsonData.meals.map(meal => ({
             id: meal.idMeal,
             name: meal.strMeal,
+            image: meal.strMealThumb,
           }))
         : [];
         },
@@ -17,7 +18,7 @@ const JsonMealService = {
           ? jsonData.categories.map(category => ({
                 idCategory: category.idCategory,
                 strCategory: category.strCategory,
-                strCategoryThumb: category.strCategoryThumb,
+                image: category.strCategoryThumb,
                 strCategoryDescription: category.strCategoryDescription,
             }))
           : [];

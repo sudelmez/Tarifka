@@ -8,7 +8,7 @@ import MealDBAPI from './data_urls.js';
 const api = new MealDBAPI();
 
 const MealService = {
-    getCategoriesInfo: async (strCategory) => {
+    getCategoriesInfo: async () => {
         try {
             const response = await axios.get(api.getCategoryURL);
             return JsonMealService.extractCategoriesInfo(response.data);
@@ -28,7 +28,6 @@ const MealService = {
             throw error;
         }
     },
-    
 
     getList: async () => {
         try {

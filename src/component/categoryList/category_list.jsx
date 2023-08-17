@@ -15,13 +15,15 @@ const Category_list = ({ fetchFunction, navigationString }) => {
             navigation.navigate(navigationString, { item });
         };
         return (
-            <CardComponent onPress={handlePress} title={item.name ? item.name : item} />
+            <CardComponent image={item.image ?? 'https://cdn-icons-png.flaticon.com/512/6394/6394109.png'} onPress={handlePress} title={item.name ? item.name : item} />
         );
     };
 
     const handleFetchCategories = useCallback(async () => {
         try {
             const result = await fetchFunction();
+            console.log('fetched');
+            console.log(result);
             if (navigationString === 'DETAIL') {
                 const recipeNames = result.map(recipe => recipe.name);
                 setList(recipeNames);

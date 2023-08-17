@@ -9,7 +9,7 @@ import styles from './categories.style';
 
 function CategoriesView() {
     return <SafeAreaView style={styles.container}>
-        <Category_list dataFunction={MealService.getCategoriesInfo} fetchFunction={MealService.getList} navigationString={'RECIPES'}/>
+        <Category_list fetchFunction={MealService.getList} navigationString={'RECIPES'}/>
     </SafeAreaView>;
 }
 
