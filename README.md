@@ -1,4 +1,6 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+This projects uses https://www.themealdb.com as api sources to show some food recipes by categories.
+
 
 # Getting Started
 
